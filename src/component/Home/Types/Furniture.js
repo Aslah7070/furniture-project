@@ -7,7 +7,7 @@ import { LoginContext } from '../../contextFolder/UserContext';
 const Furniture = () => {
     // const { ProductDatas } = useContext(MyContext);
     const { ProductDatas }=useContext(LoginContext)
-    // console.log("from home ds", ProductDatas);
+    console.log("from home ds");
   
     return (
       <div className='bg-white p-4'>
