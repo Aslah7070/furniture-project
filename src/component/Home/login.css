@@ -1,0 +1,50 @@
+
+
+  
+
+  .container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40; 
+  }
+ 
+  .form-control {
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ced4da; /* Light border color */
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue shadow */
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .container {
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  
+    .btn-primary {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  

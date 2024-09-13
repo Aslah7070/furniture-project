@@ -1,0 +1,8 @@
+.form input{
+    border-width:  5px ;
+    /* border: solid 2px black; */
+   
+}
+.form{
+    border: solid 4px black;
+}

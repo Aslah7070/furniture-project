@@ -1,0 +1,23 @@
+.productContainer {
+    margin-top: 20px;
+  }
+  
+  .productCard {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .productCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .img-fluid {
+    object-fit: cover;
+    height: 100%;
+  }
+  

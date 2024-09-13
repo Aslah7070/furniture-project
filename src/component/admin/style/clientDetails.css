@@ -1,0 +1,20 @@
+/* Adjust card size */
+.cart-item-card {
+     max-width: 300px; /*Adjust based on your design */
+    margin: auto;
+  }
+  
+  .cart-item-image {
+    height: 200px; /* Adjust based on your design */
+    object-fit: cover;
+  }
+  
+  /* Optional: Add some spacing around the cards */
+  .user-details-page .card {
+    margin-bottom: 1rem;
+  }
+ /* #block-button{
+  border: none;
+  outline: none;
+  margin: 0;
+ } */

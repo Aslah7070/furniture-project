@@ -1,0 +1,54 @@
+.footer {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 2rem 0; /* Top and bottom padding */
+}
+
+.footer h5 {
+  margin-bottom: 1.5rem; /* Spacing below heading */
+  font-size: 1.25rem; /* Slightly larger font size for headings */
+  font-weight: bold; /* Bold headings */
+}
+
+.footer a {
+  color: #ffffff; /* White color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+  color: #00aced; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer .list-unstyled {
+  padding-left: 0; /* Remove left padding */
+  list-style: none; /* Remove bullets */
+}
+
+.footer .list-unstyled li {
+  margin-bottom: 0.5rem; /* Spacing between list items */
+}
+
+.footer .d-flex a {
+  margin-right: 1rem; /* Space between social media icons */
+}
+
+.footer .d-flex a:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.footer .text-center {
+  margin-top: 2rem; /* Space above the footer text */
+  font-size: 0.875rem; /* Smaller font size for the copyright text */
+}
+
+@media (max-width: 768px) {
+  .footer .d-flex {
+    flex-direction: column; /* Stack social media links vertically on smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .footer .d-flex a {
+    margin-bottom: 0.5rem; /* Space between icons in vertical layout */
+  }
+}
