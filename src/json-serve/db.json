@@ -169,7 +169,25 @@
       "cpassword": "V1@abcde",
       "admin": false,
       "blocked": false,
-      "cart": []
+      "cart": [
+        {
+          "id": "25",
+          "name": "New Modern Floor Lamp for Rooms",
+          "category": "decor",
+          "image": "https://img.freepik.com/free-photo/digital-art-style-light-lamp-design_23-2151153863.jpg?t=st=1719940756~exp=1719944356~hmac=00ce0b97c7e77939a9a49b47b70769b58cbe5fadc8b43f110266194c80343f7e&w=826",
+          "new_price": 250,
+          "old_price": 300,
+          "description": "A modern floor lamp for contemporary living spaces.",
+          "rating": 4.5,
+          "reviews": 25,
+          "topTrends": true,
+          "newCollections": false,
+          "detailOne": "Illuminate your space with this modern floor lamp. Its sleek design and adjustable height make it ideal for reading nooks, living rooms, or home offices. The sturdy base ensures stability, while the fabric shade diffuses soft, ambient light.",
+          "emi": 10,
+          "shippingTiming": 3,
+          "qty": 2
+        }
+      ]
     },
     {
       "id": "943d",
@@ -187,22 +205,6 @@
     }
   ],
   "Products": [
-    {
-      "id": "4",
-      "name": "Simple Rustic Wooden Dining Bench",
-      "category": "dining",
-      "image": "https://img.freepik.com/free-photo/high-angle-dining-table-background-zoom-calls_23-2149684457.jpg?t=st=1722847801~exp=1722851401~hmac=5380384229ad3b08e7653f1238c8b6a91f8e41fd80e5f98d9cdb3671fae6ed7a&w=740",
-      "new_price": "300",
-      "old_price": "400",
-      "description": "A rustic wooden dining bench for added seating.",
-      "rating": 4.4,
-      "reviews": 15,
-      "topTrends": false,
-      "newCollections": false,
-      "detailOne": "This Simple Rustic Wooden Dining Bench features an extendable design, allowing you to accommodate extra guests or create more space for serving food. Crafted from solid wood, it offers durability and a classic look that complements any dining room decor.",
-      "emi": 173,
-      "shippingTiming": 2
-    },
     {
       "id": "6",
       "name": "wood Upholstered Dining Armchair",

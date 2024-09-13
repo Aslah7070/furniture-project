@@ -86,7 +86,7 @@
 
 
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../HomeStyleFiles/productDetails.css";
@@ -101,11 +101,25 @@ const ProductDetails = () => {
   const { ProductDatas } = useContext(LoginContext);
 
   const [details, setDetails] = useState([]);
-
+  const [relatedProducts,setRelatedProducts]=useState([])
+     
+   
+     
   // Filter the product based on details
   useEffect(() => {
-    setDetails(ProductDatas && ProductDatas.filter((datas) => datas.id === id));
+    let fulldetails=ProductDatas.find((datas) => datas.id === id)
+    setDetails(fulldetails?[fulldetails]:[]);
+    if(fulldetails){
+      
+      let relate= ProductDatas.filter((product)=>product.category===fulldetails.category&&product.id!==fulldetails.id)
+
+      console.log("on datas",relate);
+      
+setRelatedProducts(relate)
+    }
   }, [ProductDatas, id]);
+
+ 
 
   // Handle the cart button
   const handleCart = (product) => {
@@ -115,6 +129,21 @@ const ProductDetails = () => {
   const handleHome = () => {
     navigate("/");
   };
+  const handleScroll=()=>{
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+
+    })
+
+  }
+  const hangleRelated=(productID)=>{
+    navigate(`/productDetails/${productID}`)
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+  }
 
   return (
     <div className="container mt-5 product-details-page">
@@ -134,7 +163,7 @@ const ProductDetails = () => {
                 <p className="old-price">MRP: ₹{product.old_price}</p>
                 <p className="offer-price">Price: ₹{product.new_price}</p>
               </div>
-              <p className="product-rating">Rating: {product.rating} ★</p>
+              <p className="product-rating">Rating: {product.rating} ★★★★</p>
               <p className="product-emi">EMI starting from ₹{product.emi}</p>
               <p className="product-shipping">Ships in {product.shippingTiming} day(s)</p>
 
@@ -144,8 +173,37 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       ))}
+     
+
+<div className="container my-4">
+  <div className="row">
+    {
+      relatedProducts.length > 0 ? (
+        relatedProducts.map((product) => (
+          <div className="col-md-2 mb-4" key={product.id}> 
+            <div className="card h-100 text-center"> 
+              <img src={product.image} alt={product.name} className="card-img-top img-fluid" />
+              <div className="card-body">
+                <h5 className="card-title">{product.name}</h5>
+                <h1 className="card-text text-primary">₹{product.new_price}</h1>
+              </div>
+              <div className="card-footer">
+                <button className="btn btn-primary w-100" onClick={() =>hangleRelated(product.id)}>View Details</button>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p>No related Products</p>
+      )
+    }
+  </div>
+</div>
+
+
+
     </div>
   );
 };

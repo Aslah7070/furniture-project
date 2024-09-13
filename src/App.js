@@ -65,7 +65,6 @@ return (
   <Routes>
     
 <Route path="/" element={<Admin/>} >
-{/* <Route index  element={<Admin/>} /> */}
 <Route index  element={<Dashboard/>}/>
 <Route path="clients"element={<Clients/>} />
 <Route path="clientslists/:id"element={<ClientDetails/>} />
