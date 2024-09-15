@@ -14,7 +14,7 @@ const Home = () => {
   <div>
     <Furniture/>
      <ShopeByCategories/>
-      <Treanding/>
+      {/* <Treanding/> */}
       <NewCollections/>
       <Footer/>
      

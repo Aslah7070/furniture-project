@@ -9,9 +9,7 @@ import { LoginContext } from '../contextFolder/UserContext';
 
 const Login = () => {
 
- 
-// let   {UserLogin}= useContext(MyContext)
-  // let {handleSubmission,handleChange,datas}=UserLogin
+
        const{handleSubmission,handleChange,datas,activeUser,setActiveUser}= useContext(LoginContext)
        const userName = activeUser?.username;
        const email = activeUser?.email;

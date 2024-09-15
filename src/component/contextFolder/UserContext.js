@@ -62,6 +62,7 @@ const UserContext = ({children}) => {
             localStorage.setItem("activeUserData",JSON.stringify(user))
             setActiveUser(user)  
             alert("Login successfully")
+          
             navigate("/home") 
             setDatas({ username:"",password:""}) 
             

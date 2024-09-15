@@ -20,7 +20,7 @@ const ProductsListD = () => {
   // console.log("hello",id);
   
 
-  const findProduct = products.filter((item) => item.id === id);
+  const findProduct = products.filter((item) => item.id == id);
   console.log(  "findproduct",findProduct);
 useEffect(()=>{
       try {
@@ -40,18 +40,18 @@ useEffect(()=>{
         <div key={data.id} className={`card mb-3 ${styles.productCard}`}>
           <div className="row g-0">
             <div className="col-md-4">
-              <img src={data.image} alt={data.name} className="img-fluid rounded-start" />
+              <img src={data.image} alt={data.imageCategory} className="img-fluid rounded-start" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title">{data.name}</h5>
-                <p className="card-text">Category: {data.category}</p>
-                <p className="card-text text-danger">New Price: {data.new_price}</p>
-                <p className="card-text text-muted">Old Price: {data.old_price}</p>
-                <p className="card-text">Top Trends: {data.topTrends?"Yse":"No"}</p>
-                <p className="card-text">Top Trends: {data.newCollections?"Yes":"No"}</p>
-                <p className="card-text "> {`"${data.detailOne}"`}</p>
-                <p className="card-text "> {data.description}</p>
+                <h5 className="card-title">{data.imageCategory}</h5>
+                <p className="card-text text-dark">Category: {data.type}</p>
+                <p className="card-text text-danger">New Price:  ₹{data.offerPrice}</p>
+                <p className="card-text text-green">MRP:  ₹{data.price}</p>
+                <p className="card-text text-dark">Top Trends: {data.topTrends?"Yse":"No"}</p>
+                <p className="card-text text-dark">Top Trends: {data.newCollections?"Yes":"No"}</p>
+                <p className="card-text text-dark"> {`"${data.details}"`}</p>
+                <p className="card-text text-dark"> {data.description}</p>
 
               </div>
             </div>

@@ -19,7 +19,7 @@ const Dashboard = () => {
             />
             <div className="card-body">
               <h1 className="card-title"> PRODUCTS</h1>
-              <p className="card-text">
+              <p className="card-text text-dark">
                 Here is a list of all products available in the store.
               </p>
             <Link to="/products"><button className="btn btn-primary" >View Products</button></Link>
@@ -36,7 +36,7 @@ const Dashboard = () => {
             />
             <div className="card-body">
               <h1 className="card-title"> CONTRIBUTORS</h1>
-              <p className="card-text">
+              <p className="card-text text-dark">
                 View the details of all registered users.
               </p>
               

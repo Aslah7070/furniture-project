@@ -102,16 +102,22 @@ const ProductDetails = () => {
 
   const [details, setDetails] = useState([]);
   const [relatedProducts,setRelatedProducts]=useState([])
+  console.log("details",details);
+  console.log("id",id);
+  console.log("ProductDatas",ProductDatas);
+  
      
    
      
   // Filter the product based on details
   useEffect(() => {
-    let fulldetails=ProductDatas.find((datas) => datas.id === id)
+    let fulldetails=ProductDatas.find((datas) => datas.id == id)
+    console.log("fulldetails",fulldetails);
+    
     setDetails(fulldetails?[fulldetails]:[]);
     if(fulldetails){
       
-      let relate= ProductDatas.filter((product)=>product.category===fulldetails.category&&product.id!==fulldetails.id)
+      let relate= ProductDatas.filter((product)=>product.type===fulldetails.type&&product.id!==fulldetails.id)
 
       console.log("on datas",relate);
       
@@ -129,14 +135,7 @@ setRelatedProducts(relate)
   const handleHome = () => {
     navigate("/");
   };
-  const handleScroll=()=>{
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
 
-    })
-
-  }
   const hangleRelated=(productID)=>{
     navigate(`/productDetails/${productID}`)
     window.scrollTo({
@@ -146,26 +145,25 @@ setRelatedProducts(relate)
   }
 
   return (
-    <div className="container mt-5 product-details-page">
+    <div className="container product-details-page" style={{marginTop:"100px"}}>
       {details && details.map((product) => (
         <div key={product.id} className="row">
           <div className="col-md-6">
             <div className="product-image-container">
-              <img src={product.image} alt={product.name} className="product-image" />
+              <img src={product.image} alt={product.imageCategory} className="product-image" />
             </div>
           </div>
           <div className="col-md-6">
             <div className="product-info-container">
-              <h2 className="product-name">{product.name}</h2>
-              <p className="product-detail">{product.detailOne}</p>
+              <h2 className="product-name">{product.imageCategory}</h2>
+              <p className="product-detail">{product.details}</p>
               <p className="product-description">{product.description}</p>
               <div className="price-section">
-                <p className="old-price">MRP: ₹{product.old_price}</p>
-                <p className="offer-price">Price: ₹{product.new_price}</p>
+                <p className="old-price">MRP: ₹{product.price}</p>
+                <p className="offer-price">Price: ₹{product.offerPrice}</p>
               </div>
+              <p >Available: {product.quantity} </p>
               <p className="product-rating">Rating: {product.rating} ★★★★</p>
-              <p className="product-emi">EMI starting from ₹{product.emi}</p>
-              <p className="product-shipping">Ships in {product.shippingTiming} day(s)</p>
 
               <div className="button-group">
                 <button className="btn btn-warning add-to-cart-button" onClick={() => handleCart(product)}>Add to Cart</button>
@@ -184,10 +182,10 @@ setRelatedProducts(relate)
         relatedProducts.map((product) => (
           <div className="col-md-2 mb-4" key={product.id}> 
             <div className="card h-100 text-center"> 
-              <img src={product.image} alt={product.name} className="card-img-top img-fluid" />
+              <img src={product.image} alt={product.imageCategory} className="card-img-top img-fluid" />
               <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <h1 className="card-text text-primary">₹{product.new_price}</h1>
+                <h5 className="card-title">{product.imageCategory}</h5>
+                <h1 className="card-text text-success">₹{product.offerPrice}</h1>
               </div>
               <div className="card-footer">
                 <button className="btn btn-primary w-100" onClick={() =>hangleRelated(product.id)}>View Details</button>

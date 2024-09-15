@@ -21,7 +21,7 @@
   }
 
   .custom-brand:hover {
-    color: dodgerblue;
+    color: black;
   }
 
   .custom-link {
@@ -35,7 +35,7 @@
   }
 
   .custom-link:hover {
-    color: red;
+    color: black;
   }
 
   .custom-navbar .nav {
@@ -88,7 +88,7 @@
     }
   }
   .username {
-    color: lime;
+    color: black;
     display: inline; 
     font-size: 1rem; 
     font-weight: 700;

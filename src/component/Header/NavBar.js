@@ -318,11 +318,11 @@ function NavBar() {
     // console.log("cart",cartItems.length);
     let cartlength=cartItems.length;
     
-      let user=activeUser?activeUser.username:"No user"
+      let user=activeUser&&activeUser.username
   return (
     <Navbar  expand="lg" className="custom-navbar ">
       <Navbar.Brand as={NavLink} to="/home" className="custom-brand">
-        FurnisH
+      FurniLux
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

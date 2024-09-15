@@ -306,7 +306,7 @@ function AddToCart() {
         
           
   const getTotalPrice = () => {
-    return cartItems.reduce((total, product) => total + product.new_price * product.qty, 0);
+    return cartItems.reduce((total, product) => total + product.offerPrice * product.qty, 0);
   };
 
   return (
@@ -322,7 +322,7 @@ function AddToCart() {
                 <img src={item.image} alt={item.name} className="card-img-top" style={{ maxWidth: '100%', height: '200px', objectFit: 'cover' }} />
                 <div className="card-body">
                   <h5 className="card-title">{item.name}</h5>
-                  <p className="card-text text-danger">Price: ₹{item.new_price}</p>
+                  <p className="card-text text-danger">Price: ₹{item.offerPrice}</p>
                   <div className="d-flex align-items-center mb-2">
                     <p className="mb-0 me-2">Quantity:</p>
                     <div className="input-group">
@@ -349,7 +349,7 @@ function AddToCart() {
                   </div>
                   <div className="d-flex justify-content-between align-items-center">
                     <button onClick={() => removeFromCart(item.id)} className="btn btn-danger btn-sm">Remove</button>
-                    <p className="fw-bold mb-0">Subtotal: ₹{(item.new_price * item.qty).toFixed(2)}</p>
+                    <p className="fw-bold mb-0">Subtotal: ₹{(item.offerPrice * item.qty).toFixed(2)}</p>
                   </div>
                 </div>
               </div>

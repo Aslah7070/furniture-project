@@ -60,19 +60,19 @@ const Products = () => {
     setListCategory(allCategory);
   }
   const handleDining=()=>{
-    let allCategory=producesLists.filter((products)=>products.category==="dining");
+    let allCategory=producesLists.filter((products)=>products.type==="Dining Room Furniture");
     setListCategory(allCategory)
   }
   const handleRoom=()=>{
-    let allCategory=producesLists.filter((products)=>products.category==="bedroom");
+    let allCategory=producesLists.filter((products)=>products.type==="Bedroom Furniture");
     setListCategory(allCategory)
   }
   const handleLiving=()=>{
-    let allCategory=producesLists.filter((products)=>products.category==="livingroom");
+    let allCategory=producesLists.filter((products)=>products.type==="Living Room Furniture");
     setListCategory(allCategory)
   }
   const handleDecoretion=()=>{
-    let allCategory=producesLists.filter((products)=>products.category==="decor");
+    let allCategory=producesLists.filter((products)=>products.type==="Decoretion Furniture");
     setListCategory(allCategory)
   }
  
@@ -85,7 +85,7 @@ const Products = () => {
   <option value="" >Select a category</option>
     <option value="option1">All</option>
     <option value="option2">Dining Products</option>
-    <option value="option3">Room products</option>
+    <option value="option3">Bedroom products</option>
     <option value="option4">Living products</option>
     <option value="option5">Decoretion Products</option>
   </select>
@@ -108,10 +108,10 @@ const Products = () => {
               listCategory&&listCategory.map((datas,index)=>(
                 <tr key={index}>
                   <td>{index+1}</td>
-                  <td><img id='image' src={datas.image} alt={datas.name} /></td>
-                  <td>{datas.name}</td>
-                  <td>{datas.category}</td>
-                  <td>{datas.new_price}</td>
+                  <td><img id='image' src={datas.image} alt={datas.imageCategory} /></td>
+                  <td>{datas.imageCategory}</td>
+                  <td>{datas.type}</td>
+                  <td className='text-success '>₹{datas.offerPrice}</td>
                   <td><Link to={`/productslistdetails/${datas.id}`}><button>View</button></Link></td>
                   <td><button onClick={()=>deleteProductOnlist(datas.id)} className='bg-danger'>Delete</button></td>
                 </tr>
