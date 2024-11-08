@@ -49,9 +49,7 @@ const ProductContext = ({children}) => {
            let response= await axios.get(`http://localhost:4000/Users/${activeUser.id}`)
        let currentUserOnDB= response.data
       //  console.log("userCart",currentUserOnDB.cart);
-       
-    
-       
+ 
    let existingItem= currentUserOnDB.cart.find((item)=>item.id===product.id);
    if(existingItem){
     alert("this item is already in your cart")
