@@ -42,9 +42,9 @@ const ProductContext = ({ children }) => {
 
 
   const addToCart = async (product) => {
-<<<<<<< HEAD
+
     console.log("my product", product._id);
-=======
+
     console.log("my product",product);
     
            if(activeUser){ 
@@ -57,7 +57,7 @@ const ProductContext = ({ children }) => {
    if(existingItem){
     alert("this item is already in your cart")
    }else{
->>>>>>> f605be4456947d8bb201c211994788b1faff53c4
+
 
     if (activeUser) {
       console.log(product.id);
@@ -71,6 +71,8 @@ const ProductContext = ({ children }) => {
       alert("please login")
     }
   };
+}
+}
 
 
   const removeFromCart = async (itemId, index) => {
