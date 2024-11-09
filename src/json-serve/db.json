@@ -98,6 +98,7 @@
           "outDoor": false,
           "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space.",
           "qty": 1
+<<<<<<< HEAD
         },
         {
           "id": "6",
@@ -126,6 +127,8 @@
           "outDoor": false,
           "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
           "qty": 1
+=======
+>>>>>>> f605be4456947d8bb201c211994788b1faff53c4
         }
       ]
     },

@@ -42,7 +42,22 @@ const ProductContext = ({ children }) => {
 
 
   const addToCart = async (product) => {
+<<<<<<< HEAD
     console.log("my product", product._id);
+=======
+    console.log("my product",product);
+    
+           if(activeUser){ 
+      const itemWithQty={...product,qty:1  }
+           let response= await axios.get(`http://localhost:4000/Users/${activeUser.id}`)
+       let currentUserOnDB= response.data
+      //  console.log("userCart",currentUserOnDB.cart);
+ 
+   let existingItem= currentUserOnDB.cart.find((item)=>item.id===product.id);
+   if(existingItem){
+    alert("this item is already in your cart")
+   }else{
+>>>>>>> f605be4456947d8bb201c211994788b1faff53c4
 
     if (activeUser) {
       console.log(product.id);
