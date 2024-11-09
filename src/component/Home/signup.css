@@ -1,4 +1,4 @@
-span{
+/* span{
     color: red;
     font-size: 12px;
     display: none;
@@ -8,4 +8,4 @@ input:invalid[focus='true'] ~span{
 }
 input:invalid[focus='true']{
    border: 1px solid red;
-  }
+  } */

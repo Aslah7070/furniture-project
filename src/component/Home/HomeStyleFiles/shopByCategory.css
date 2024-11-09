@@ -1,4 +1,4 @@
-.Bedroom-Img{
+ .Bedroom-Img{
     background-image: url("https://images.durian.in/Durian/durian/product/800x800/937681671270399.jpg?tr=w-544,pr-true,f-auto");
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,30 +29,4 @@
     
    
 
-}
-.category-item {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    background-size: cover;
-    background-position: center;
-    height: 350px; /* Adjust the height as needed */
-    color: white;
-    text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-
-  .category-item h1 {
-    color: black;
-    background-color:#fff;
-    border-radius: 15px;
-    font-size: 34px;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Shadow effect */
-    transition: text-shadow 0.3s ease;
-}
-
-.category-item h1:hover {
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
-}
+} 

@@ -136,368 +136,21 @@
 
 
 
-
-
-
-
-
-
-
-// // RegistrationForm.js
-// import React, { useState } from 'react';
-// import { Form, Button, Container } from 'react-bootstrap';
-// import './signup.css';
-// import axios from "axios"
-
-// function RegistrationForm() {
-//   const [inputs, setInputs] = useState({
-//     username: '',
-//     email: '',
-//     password: '',
-//     cpassword: '',
-//     cart:[]
-//   });
-
-//   const [errors, setErrors] = useState({});
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setInputs({ ...inputs, [name]: value });
-//   };
-
-//   const validate = () => {
-//     let errors = {};
-
-//     // Username validation
-//     if (!inputs.username) {
-//       errors.username = 'Username is required.';
-//     } else if (!/^[A-Za-z0-9]{3,16}$/.test(inputs.username)) {
-//       errors.username = 'Username should be 3-16 characters and alphanumeric.';
-//     }
-
-//     // Email validation
-//     if (!inputs.email) {
-//       errors.email = 'Email is required.';
-//     } else if (!/\S+@\S+\.\S+/.test(inputs.email)) {
-//       errors.email = 'Email address is invalid.';
-//     }
-
-//     // Password validation
-//     if (!inputs.password) {
-//       errors.password = 'Password is required.';
-//     } else if (!/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,16}$/.test(
-//       inputs.password)) {
-//       errors.password = 'Password must be 8-16 characters long, with at least one uppercase letter, one lowercase letter, one digit, and one special character.';
-//     }
-
-//     // Confirm Password validation
-//     if (!inputs.cpassword) {
-//       errors.cpassword = 'Confirm password is required.';
-//     } else if (inputs.password !== inputs.cpassword) {
-//       errors.cpassword = 'Passwords do not match.';
-//     }
-
-//     setErrors(errors);
-//     return Object.keys(errors).length === 0;
-//   };
-
-//   const handleSubmit = async(e) => {
-//     e.preventDefault();
-//     if (validate()) {
-//       alert('Form submitted successfully!', inputs);
-//       // You can handle form submission here (e.g., send data to backend)
-//     }
-
-//     try{
-//      const response= await axios.post("http://localhost:3000/Users",inputs)
-
-//      console.log("user registered " ,response.data);
-//      //cleare the form datas
-//                 setInputs({
-//                   username: '',
-//                   email: '',
-//                   password: '',
-//                   cpassword: '',
-//                   cart:[]
-//                 })
-//     }catch(errr){
-//         console.log("user registered error", errr);
-        
-//     }
-
-    
-//   };
-
-//   return (
-//     <Container style={{ maxWidth: '500px' }}>
-//       <h2>Register</h2>
-//       <Form onSubmit={handleSubmit}>
-//         <Form.Group controlId="formUsername" className="mb-3">
-//           <Form.Label>Username</Form.Label>
-//           <Form.Control
-//             type="text"
-//             name="username"
-//             value={inputs.username}
-//             onChange={handleChange}
-//             isInvalid={!!errors.username}
-//           />
-//           <Form.Control.Feedback type="invalid">
-//             {errors.username}
-//           </Form.Control.Feedback>
-//         </Form.Group>
-
-//         <Form.Group controlId="formEmail" className="mb-3">
-//           <Form.Label>Email</Form.Label>
-//           <Form.Control
-//             type="email"
-//             name="email"
-//             value={inputs.email}
-//             onChange={handleChange}
-//             isInvalid={!!errors.email}
-//           />
-//           <Form.Control.Feedback type="invalid">
-//             {errors.email}
-//           </Form.Control.Feedback>
-//         </Form.Group>
-
-//         <Form.Group controlId="formPassword" className="mb-3">
-//           <Form.Label>Password</Form.Label>
-//           <Form.Control
-//             type="text"
-//             name="password"
-//             value={inputs.password}
-//             onChange={handleChange}
-//             isInvalid={!!errors.password}
-//           />
-//           <Form.Control.Feedback type="invalid">
-//             {errors.password}
-//           </Form.Control.Feedback>
-//         </Form.Group>
-
-//         <Form.Group controlId="formCPassword" className="mb-3">
-//           <Form.Label>Confirm Password</Form.Label>
-//           <Form.Control
-//             type="text"
-//             name="cpassword"
-//             value={inputs.cpassword}
-//             onChange={handleChange}
-//             isInvalid={!!errors.cpassword}
-//           />
-//           <Form.Control.Feedback type="invalid">
-//             {errors.cpassword}
-//           </Form.Control.Feedback>
-//         </Form.Group>
-
-//         <Button variant="primary" type="submit">
-//           Register
-//         </Button>
-//       </Form>
-//     </Container>
-//   );
-// }
-
-// export default RegistrationForm;
-
-
-//   import React, { useState } from 'react';
-//   import { Form, Button, Container } from 'react-bootstrap';
-//   import './signup.css';
-// // import { MyContext } from '../contextFolder/AllContext';
-// import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
-
-  
-
-//   function Signup() {
-    
-
-
-//     const navigate=useNavigate()
-
-//     const [inputs, setInputs] = useState({
-//         username: '',
-//         fullname:"",
-//         email: '',
-//         phonenumber:"",
-//         gender:"",
-//         address:"",
-//         password: '',
-//         cpassword: '',
-//         admin:false,
-//         blocked: false,  
-//         cart: []
-//       });
-  
-//       const [errors, setErrors] = useState({});
-  
-//       const handleChange = (e) => {
-//         const { name, value } = e.target;
-//         setInputs({ ...inputs, [name]: value });
-//       };
-  
-//       const validate = () => {
-//         let errors = {};
-  
-//         // Username validation
-//         if (!inputs.username) {
-//           errors.username = 'Username is required.';
-//         } else if (!/^[A-Za-z0-9]{3,16}$/.test(inputs.username)) {
-//           errors.username = 'Username should be 3-16 characters and alphanumeric.';
-//         }
-  
-//         // Email validation
-//         if (!inputs.email) {
-//           errors.email = 'Email is required.';
-//         } else if (!/\S+@\S+\.\S+/.test(inputs.email)) {
-//           errors.email = 'Email address is invalid.';
-//         }
-  
-//         // Password validation
-//         if (!inputs.password) {
-//           errors.password = 'Password is required.';
-//         } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,16}$/.test(inputs.password)) {
-//           errors.password = 'Password must be 8-16 characters long, with at least one uppercase letter, one lowercase letter, one digit, and one special character.';
-//         }
-  
-//         // Confirm Password validation
-//         if (!inputs.cpassword) {
-//           errors.cpassword = 'Confirm password is required.';
-//         } else if (inputs.password !== inputs.cpassword) {
-//           errors.cpassword = 'Passwords do not match.';
-//         }
-  
-//         setErrors(errors);
-//         //here return the validation if error state object keys length is 0
-//         return Object.keys(errors).length === 0;
-//       };
-  
-//       const handleSubmit = async (e) => {
-//         //preventing the default behavior of the browser
-//         e.preventDefault();
-
-//         //checking the return validation result is true
-//         if (validate()) {
-         
-  
-//           try {
-//             //  inputs state datas post the data to users localhost json-server
-//             const response = await axios.post("http://localhost:4000/Users", inputs);
-  
-//             console.log("User registered", response.data);
-//             // Clear the form data
-//             setInputs({
-//               username: '',
-//               email: '',
-//               password: '',
-//               cpassword: '',
-//               cart: []
-//             });
-  
-//             alert(" registration sucesssfully")
-//             navigate("/login")
-            
-//           } catch (err) {
-//             console.error("Error registering user", err);
-//           }
-//         }
-   
-//       };
-
-
-//     return (
-//       <Container style={{ maxWidth: '500px' }}>
-//         <h2>Register</h2>
-//         <Form onSubmit={handleSubmit}>
-//           <Form.Group controlId="formUsername" className="mb-3">
-//             <Form.Label>Username</Form.Label>
-//             <Form.Control
-//               type="text"
-//               name="username"
-//               value={inputs.username}
-//               onChange={handleChange}
-//               isInvalid={!!errors.username}
-//             />
-//             <Form.Control.Feedback type="invalid">
-//               {errors.username}
-//             </Form.Control.Feedback>
-//           </Form.Group>
-
-//           <Form.Group controlId="formEmail" className="mb-3">
-//             <Form.Label>Email</Form.Label>
-//             <Form.Control
-//               type="email"
-//               name="email"
-//               value={inputs.email}
-//               onChange={handleChange}
-//               isInvalid={!!errors.email}
-//             />
-//             <Form.Control.Feedback type="invalid">
-//               {errors.email}
-//             </Form.Control.Feedback>
-//           </Form.Group>
-
-//           <Form.Group controlId="formPassword" className="mb-3">
-//             <Form.Label>Password</Form.Label>
-//             <Form.Control
-//               type="password"
-//               name="password"
-//               value={inputs.password}
-//               onChange={handleChange}
-//               isInvalid={!!errors.password}
-//             />
-//             <Form.Control.Feedback type="invalid">
-//               {errors.password}
-//             </Form.Control.Feedback>
-//           </Form.Group>
-
-//           <Form.Group controlId="formCPassword" className="mb-3">
-//             <Form.Label>Confirm Password</Form.Label>
-//             <Form.Control
-//               type="password"
-//               name="cpassword"
-//               value={inputs.cpassword}
-//               onChange={handleChange}
-//               isInvalid={!!errors.cpassword}
-//             />
-//             <Form.Control.Feedback type="invalid">
-//               {errors.cpassword}
-//             </Form.Control.Feedback>
-//           </Form.Group>
-
-//           <Button variant="primary" type="submit">
-//             Register
-//           </Button>
-//         </Form>
-//       </Container>
-//     );
-//   }
-
-//   export default Signup;
-
-
-
-
-
 import React, { useState } from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 
 function Signup() {
   const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({
     username: '',
-    fullname: '',
     email: '',
     phonenumber: '',
-    gender: '',
     address: '',
     password: '',
-    cpassword: '',
-    admin: false,
-    blocked: false,
-    cart: [],
+    confirmPassword: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -509,66 +162,20 @@ function Signup() {
 
   const validate = () => {
     let errors = {};
-
-    // Username validation
-    if (!inputs.username) {
-      errors.username = 'Username is required.';
-    } else if (!/^[A-Za-z0-9]{3,16}$/.test(inputs.username)) {
-      errors.username = 'Username should be 3-16 characters and alphanumeric.';
-    }
-
-    // Fullname validation
-    if (!inputs.fullname) {
-      errors.fullname = 'Full name is required.';
-    }
-
-    // Email validation
-    if (!inputs.email) {
-      errors.email = 'Email is required.';
-    } else if (!/\S+@\S+\.\S+/.test(inputs.email)) {
-      errors.email = 'Email address is invalid.';
-    }
-
-    // Password validation
-    if (!inputs.password) {
-      errors.password = 'Password is required.';
-    } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,16}$/.test(inputs.password)) {
-      errors.password = 'Password must be 8-16 characters long, with at least one uppercase letter, one lowercase letter, one digit, and one special character.';
-    }
-
-    // Confirm Password validation
-    if (!inputs.cpassword) {
-      errors.cpassword = 'Confirm password is required.';
-    } else if (inputs.password !== inputs.cpassword) {
-      errors.cpassword = 'Passwords do not match.';
-    }
-
+    // ... validation logic for fields here
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (validate()) {
       try {
-        const response = await axios.post("http://localhost:4000/Users", inputs);
+        const response = await axios.post("http://localhost:3000/signup", inputs);
         console.log("User registered", response.data);
-
-        setInputs({
-          username: '',
-          fullname: '',
-          email: '',
-          phonenumber: '',
-          gender: '',
-          address: '',
-          password: '',
-          cpassword: '',
-          cart: [],
-        });
-
-        alert("Registration successfully");
-        navigate("/login");
+        // Reset inputs and navigate
+        alert("registerrd success fully")
+        navigate('/login'); // Adjust this as needed
       } catch (err) {
         console.error("Error registering user", err);
       }
@@ -576,138 +183,437 @@ function Signup() {
   };
 
   return (
-    <Container style={{ maxWidth: '500px' }}>
-      <h2>Register</h2>
-      <Form onSubmit={handleSubmit}>
-        {/* Username */}
-        <Form.Group controlId="formUsername" className="mb-3">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
-            type="text"
-            name="username"
-            value={inputs.username}
-            onChange={handleChange}
-            isInvalid={!!errors.username}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.username}
-          </Form.Control.Feedback>
-        </Form.Group>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-lg">
+        <h2 className="text-3xl font-semibold text-center text-blue-500">Sign Up</h2>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Username */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Username</label>
+            <input
+              type="text"
+              name="username"
+              value={inputs.username}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+          </div>
 
-        {/* Fullname */}
-        <Form.Group controlId="formFullname" className="mb-3">
-          <Form.Label>Full Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="fullname"
-            value={inputs.fullname}
-            onChange={handleChange}
-            isInvalid={!!errors.fullname}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.fullname}
-          </Form.Control.Feedback>
-        </Form.Group>
+          {/* Email */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={inputs.email}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+          </div>
 
-        {/* Email */}
-        <Form.Group controlId="formEmail" className="mb-3">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            value={inputs.email}
-            onChange={handleChange}
-            isInvalid={!!errors.email}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.email}
-          </Form.Control.Feedback>
-        </Form.Group>
+          {/* Phone Number */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
+            <input
+              type="text"
+              name="phonenumber"
+              value={inputs.phonenumber}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.phonenumber && <p className="text-red-500 text-sm">{errors.phonenumber}</p>}
+          </div>
 
-        {/* Phone Number */}
-        <Form.Group controlId="formPhoneNumber" className="mb-3">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control
-            type="text"
-            name="phonenumber"
-            value={inputs.phonenumber}
-            onChange={handleChange}
-          />
-        </Form.Group>
+          {/* Address */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Address</label>
+            <input
+              type="text"
+              name="address"
+              value={inputs.address}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.address && <p className="text-red-500 text-sm">{errors.address}</p>}
+          </div>
 
-        {/* Gender */}
-        <Form.Group className="mb-3">
-          <Form.Label>Gender</Form.Label> <br />
-          <Form.Check
-            type="radio"
-            label="Male"
-            name="gender"
-            value="male"
-            onChange={handleChange}
-            checked={inputs.gender === 'male'}
-            inline
-          />
-          <Form.Check
-            type="radio"
-            label="Female"
-            name="gender"
-            value="female"
-            onChange={handleChange}
-            checked={inputs.gender === 'female'}
-            inline
-          />
-        </Form.Group>
+          {/* Password */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Password</label>
+            <input
+              type="password"
+              name="password"
+              value={inputs.password}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+          </div>
 
-        {/* Address */}
-        <Form.Group controlId="formAddress" className="mb-3">
-          <Form.Label>Address</Form.Label>
-          <Form.Control
-            type="text"
-            name="address"
-            value={inputs.address}
-            onChange={handleChange}
-          />
-        </Form.Group>
+          {/* Confirm Password */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={inputs.confirmPassword}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-400"
+            />
+            {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+          </div>
 
-        {/* Password */}
-        <Form.Group controlId="formPassword" className="mb-3">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            value={inputs.password}
-            onChange={handleChange}
-            isInvalid={!!errors.password}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.password}
-          </Form.Control.Feedback>
-        </Form.Group>
-
-        {/* Confirm Password */}
-        <Form.Group controlId="formCPassword" className="mb-3">
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="cpassword"
-            value={inputs.cpassword}
-            onChange={handleChange}
-            isInvalid={!!errors.cpassword}
-          />
-          <Form.Control.Feedback type="invalid">
-            {errors.cpassword}
-          </Form.Control.Feedback>
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Register
-        </Button>
-      </Form>
-    </Container>
+          <button
+            type="submit"
+            className="w-full py-3 mt-4 font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
 
 export default Signup;
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import aslah5 from "../../assets/Aslah5.jpg"; // Ensure this is the correct path to your image
+// import register from "../../assets/registerBG1.jpg"; // Ensure this is the correct path to your image
+
+// function Signup() {
+//   const navigate = useNavigate();
+
+//   const [inputs, setInputs] = useState({
+//     username: '',
+//     email: '',
+//     phonenumber: '',
+//     address: '',
+//     password: '',
+//     confirmPassword: '',
+//   });
+
+//   const [errors, setErrors] = useState({});
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setInputs({ ...inputs, [name]: value });
+//   };
+
+//   const validate = () => {
+//     let errors = {};
+//     // ... validation logic for fields here
+//     setErrors(errors);
+//     return Object.keys(errors).length === 0;
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     if (validate()) {
+//       try {
+//         const response = await axios.post("http://localhost:3000/signup", inputs);
+//         console.log("User registered", response.data);
+//         alert("Registered successfully");
+//         navigate('/login'); // Adjust this as needed
+//       } catch (err) {
+//         console.error("Error registering user", err);
+//       }
+//     }
+//   };
+
+//   return (
+//     <div 
+//       className="flex items-center justify-center min-h-screen bg-cover bg-center" 
+//       style={{ backgroundImage: `url(${register})` }}
+//     >
+//       {/* bg-opacity-70 bg-gradient-to-r from-purple-800 to-blue-800 */}
+//       <div className="w-full max-w-lg p-8 bg-transparent  rounded-xl shadow-lg text-white">
+//         <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
+
+//         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//           {/* Full Name */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">person</span>
+//             <input
+//               type="text"
+//               name="username"
+//               placeholder="Full Name"
+//               value={inputs.username}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+//           </div>
+
+//           {/* Username */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">account_circle</span>
+//             <input
+//               type="text"
+//               name="username"
+//               placeholder="Username"
+//               value={inputs.username}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+//           </div>
+
+//           {/* Email */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">email</span>
+//             <input
+//               type="email"
+//               name="email"
+//               placeholder="Email"
+//               value={inputs.email}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+//           </div>
+
+//           {/* Phone Number */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">phone</span>
+//             <input
+//               type="tel"
+//               name="phonenumber"
+//               placeholder="Phone Number"
+//               value={inputs.phonenumber}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.phonenumber && <p className="text-red-500 text-sm">{errors.phonenumber}</p>}
+//           </div>
+
+//           {/* Password */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">lock</span>
+//             <input
+//               type="password"
+//               name="password"
+//               placeholder="Password"
+//               value={inputs.password}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+//           </div>
+
+//           {/* Confirm Password */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">lock</span>
+//             <input
+//               type="password"
+//               name="confirmPassword"
+//               placeholder="Confirm Password"
+//               value={inputs.confirmPassword}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+//           </div>
+//         </form>
+
+//         {/* Newsletter Checkbox */}
+//         <div className="flex items-center mt-4">
+//           <input type="checkbox" className="h-4 w-4 text-blue-500 focus:ring-blue-400 rounded" />
+//           <label className="ml-2 text-sm text-white">Send me E-mails about the News.</label>
+//         </div>
+
+//         {/* Register Button */}
+//         <button className="w-full mt-6 py-3 bg-white text-blue-800 font-bold rounded-full hover:bg-gray-200 transition duration-300">
+//           Register
+//         </button>
+//       </div>
+
+//       {/* Material Icons Link */}
+//       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+//     </div>
+//   );
+// }
+
+// export default Signup;
+
+
+
+
+
+
+
+// last one=-------=-=========-=-----------=-=======
+
+// import React, { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+// import register from "../../assets/registerBG1.jpg";
+
+// function Signup() {
+//   const navigate = useNavigate();
+
+//   const [inputs, setInputs] = useState({
+//     username: '',
+//     email: '',
+//     phonenumber: '',
+//     address: '',
+//     password: '',
+//     confirmPassword: '',
+//   });
+
+//   const [errors, setErrors] = useState({});
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setInputs({ ...inputs, [name]: value });
+//   };
+
+//   const validate = () => {
+//     let errors = {};
+//     // ... validation logic for fields here
+//     setErrors(errors);
+//     return Object.keys(errors).length === 0;
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     if (validate()) {
+//       try {
+//         const response = await axios.post("http://localhost:3000/signup", inputs);
+//         console.log("User registered", response.data);
+//         alert("Registered successfully");
+//         navigate('/login'); // Adjust this as needed
+//       } catch (err) {
+//         console.error("Error registering user", err);
+//       }
+//     }
+//   };
+
+//   return (
+//     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500" style={{ backgroundImage: `url(${register})`, backgroundSize: 'cover' }}>
+//       <div className="w-full max-w-lg p-8 bg-transparent rounded-xl shadow-lg text-white border-4 border-white">
+//         <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
+
+//         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//           {/* Full Name */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">person</span>
+//             <input
+//               type="text"
+//               name="username"
+//               placeholder="Full Name"
+//               value={inputs.username}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+//           </div>
+
+//           {/* Username */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">account_circle</span>
+//             <input
+//               type="text"
+//               name="username"
+//               placeholder="Username"
+//               value={inputs.username}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
+//           </div>
+
+//           {/* Email */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">email</span>
+//             <input
+//               type="email"
+//               name="email"
+//               placeholder="Email"
+//               value={inputs.email}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+//           </div>
+
+//           {/* Phone Number */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">phone</span>
+//             <input
+//               type="tel"
+//               name="phonenumber"
+//               placeholder="Phone Number"
+//               value={inputs.phonenumber}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.phonenumber && <p className="text-red-500 text-sm">{errors.phonenumber}</p>}
+//           </div>
+
+//           {/* Password */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">lock</span>
+//             <input
+//               type="password"
+//               name="password"
+//               placeholder="Password"
+//               value={inputs.password}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+//           </div>
+
+//           {/* Confirm Password */}
+//           <div className="flex items-center border-b-2 border-white p-2 rounded">
+//             <span className="material-icons text-white mr-2">lock</span>
+//             <input
+//               type="password"
+//               name="confirmPassword"
+//               placeholder="Confirm Password"
+//               value={inputs.confirmPassword}
+//               onChange={handleChange}
+//               className="bg-transparent text-white w-full focus:outline-none"
+//             />
+//             {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+//           </div>
+//         </form>
+
+//         {/* Newsletter Checkbox */}
+//         <div className="flex items-center mt-4">
+//           <input type="checkbox" className="h-4 w-4 text-blue-500 focus:ring-blue-400 rounded" />
+//           <label className="ml-2 text-sm text-white">Send me E-mails about the News.</label>
+//         </div>
+
+//         {/* Register Button */}
+//         <button className="w-full mt-6 py-3 bg-white text-blue-800 font-bold rounded-full hover:bg-gray-200 transition duration-300">
+//           Register
+//         </button>
+//       </div>
+
+//       {/* Material Icons Link */}
+//       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+//     </div>
+//   );
+// }
+
+// export default Signup;
+
+
+
 
 
 

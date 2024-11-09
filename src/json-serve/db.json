@@ -21,20 +21,7 @@
       "cpassword": "N1@abcde",
       "admin": false,
       "blocked": false,
-      "cart": [
-        {
-          "id": 17,
-          "type": "Bedroom Furniture",
-          "image": "https://i.pinimg.com/474x/f0/51/82/f051828712262c9538be39a24e22a5d7.jpg",
-          "imageCategory": "Nightstand",
-          "description": "Yttervåg Nightstand, Gray-Brown",
-          "price": 79.99,
-          "quantity": 15,
-          "offerPrice": 55.99,
-          "details": "Complete your bedroom with the Hemnes Nightstand in Black-Brown. This nightstand features a drawer and shelf for bedside essentials, offering both storage and style. Its classic design and durable construction make it a practical addition to any bedroom.",
-          "qty": 2
-        }
-      ]
+      "cart": []
     },
     {
       "id": "5dba",
@@ -97,6 +84,48 @@
           "emi": 10,
           "shippingTiming": 3,
           "qty": 2
+        },
+        {
+          "id": "7",
+          "type": "Bedroom Furniture",
+          "image": "https://i.pinimg.com/474x/ef/52/b4/ef52b4782dcdadaae5b3b51b381c3a66.jpg",
+          "imageCategory": "Drawer Chest",
+          "description": "Björksnäs 5-Drawer Chest, Birch",
+          "price": 24999,
+          "quantity": 7,
+          "offerPrice": 18999,
+          "newCollections": true,
+          "outDoor": false,
+          "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space.",
+          "qty": 1
+        },
+        {
+          "id": "6",
+          "category": "Storage Furniture",
+          "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg?f=s",
+          "imageCategory": "Shelf Unit",
+          "description": "Kallax Shelf Unit, White",
+          "price": 69999,
+          "quantity": 12,
+          "offerPrice": 55999,
+          "newCollections": false,
+          "outDoor": false,
+          "details": "Stay organized with the Kallax Shelf Unit in White. This versatile storage solution is perfect for books, decor, or media storage. Its simple yet modern design blends seamlessly into any room, offering both style and functionality.",
+          "qty": 1
+        },
+        {
+          "id": "2",
+          "category": "Dining Room Furniture",
+          "image": "https://i.pinimg.com/474x/23/86/7d/23867da35f96d83e0255d2e67e80ba6b.jpg",
+          "imageCategory": "Dining Set",
+          "description": "Nordviken Table and 6 Chairs",
+          "price": 79999,
+          "quantity": 5,
+          "offerPrice": 63999,
+          "newCollections": false,
+          "outDoor": false,
+          "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
+          "qty": 1
         }
       ]
     },
@@ -117,8 +146,8 @@
   ],
   "Products": [
     {
-      "id": 1,
-      "type": "Living Room Furniture",
+      "id": "1",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/564x/be/61/0b/be610b47a66e0a9cc5d9599796675681.jpg",
       "imageCategory": "Sofa",
       "description": "Friheten Sleeper Sectional, 3-seat with storage",
@@ -130,8 +159,8 @@
       "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles."
     },
     {
-      "id": 2,
-      "type": "Dining Room Furniture",
+      "id": "2",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/23/86/7d/23867da35f96d83e0255d2e67e80ba6b.jpg",
       "imageCategory": "Dining Set",
       "description": "Nordviken Table and 6 Chairs",
@@ -143,8 +172,8 @@
       "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment."
     },
     {
-      "id": 3,
-      "type": "Bedroom Furniture",
+      "id": "3",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/63/d0/d9/63d0d99654d048bf3c5c68ea8015694a.jpg",
       "imageCategory": "Bed Frame",
       "description": "Slattum Upholstered Bed Frame",
@@ -156,8 +185,8 @@
       "details": "Transform your bedroom with the Slattum Upholstered Bed Frame in Knisa Light Gray. This bed frame combines modern style with comfort, featuring a padded headboard and durable construction. Its neutral color and elegant design create a relaxing atmosphere."
     },
     {
-      "id": 4,
-      "type": "Living Room Furniture",
+      "id": "4",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/564x/ed/8c/bb/ed8cbbb2a62b34f2040abbd8697b15f9.jpg",
       "imageCategory": "Coffee Table",
       "description": "Vittsjoe Coffee Table",
@@ -169,8 +198,8 @@
       "details": "Add a modern touch to your living room with the Vittsjoe Coffee Table. Featuring a black-brown frame and glass top, this table combines style with functionality. Its sleek design and versatile use make it a perfect addition to any contemporary space."
     },
     {
-      "id": 5,
-      "type": "Bedroom Furniture",
+      "id": "5",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/564x/21/c9/c2/21c9c2a3464def80a6b99ddcd92f849e.jpg",
       "imageCategory": "Wardrobe",
       "description": "Pax/Bergsbo Wardrobe",
@@ -182,8 +211,8 @@
       "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized."
     },
     {
-      "id": 6,
-      "type": "Storage Furniture",
+      "id": "6",
+      "category": "Storage Furniture",
       "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg?f=s",
       "imageCategory": "Shelf Unit",
       "description": "Kallax Shelf Unit, White",
@@ -195,8 +224,8 @@
       "details": "Stay organized with the Kallax Shelf Unit in White. This versatile storage solution is perfect for books, decor, or media storage. Its simple yet modern design blends seamlessly into any room, offering both style and functionality."
     },
     {
-      "id": 7,
-      "type": "Bedroom Furniture",
+      "id": "7",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/ef/52/b4/ef52b4782dcdadaae5b3b51b381c3a66.jpg",
       "imageCategory": "Drawer Chest",
       "description": "Björksnäs 5-Drawer Chest, Birch",
@@ -208,8 +237,8 @@
       "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space."
     },
     {
-      "id": 8,
-      "type": "Dining Room Furniture",
+      "id": "8",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/ce/80/a6/ce80a6886163ebe6241f8582db83c8e8.jpg",
       "imageCategory": "Bar Stool",
       "description": "Stig Bar Stool with Backrest, Black",
@@ -221,8 +250,8 @@
       "details": "Upgrade your kitchen or bar area with the Stig Bar Stool in Black. This bar stool features a supportive backrest and comfortable seat, ideal for extended use. Its minimalist design and durable construction make it a stylish and practical choice."
     },
     {
-      "id": 9,
-      "type": "Office Furniture",
+      "id": "9",
+      "category": "Office Furniture",
       "image": "https://www.ikea.com/us/en/images/products/bekant-corner-desk-left-black-stained-ash-veneer-black__0736406_pe740525_s5.jpg?f=m",
       "imageCategory": "Corner Desk",
       "description": "Bekant Corner Desk Left",
@@ -234,8 +263,8 @@
       "details": "Create a productive workspace with the Bekant Corner Desk in Black Stained Ash Veneer. This corner desk offers ample space for work essentials and features a modern design. Its sturdy construction and practical layout enhance efficiency in any office setting."
     },
     {
-      "id": 10,
-      "type": "Living Room Furniture",
+      "id": "10",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/cb/bf/e2/cbbfe237ab8f46e0b1112b1252780690.jpg",
       "imageCategory": "Outdoor Set",
       "description": "Askholmen Table and 2 Chairs",
@@ -247,8 +276,8 @@
       "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment."
     },
     {
-      "id": 11,
-      "type": "Living Room Furniture",
+      "id": "11",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/564x/7a/ce/21/7ace213dac0cdf2cc397030fa5a6186a.jpg",
       "imageCategory": "Corner Sleeper Sofa",
       "description": "Finnala Sleeper Sofa",
@@ -260,8 +289,8 @@
       "details": "Add versatility to your living room with the Finnala Corner Sleeper Sofa. This 5-seat sofa includes a chaise lounge, perfect for lounging or hosting guests. Its corner design maximizes space, while the sleeper function offers additional comfort for overnight guests."
     },
     {
-      "id": 12,
-      "type": "Bedroom Furniture",
+      "id": "12",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/df/04/e3/df04e3dc975255f9e13736145379e64b.jpg",
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
@@ -273,8 +302,8 @@
       "details": "Upgrade your bedroom with the Malm Bed Frame in High Black-Brown/Luröy. This bed frame features a high headboard and sturdy construction, providing both style and support. Its versatile design complements various decor styles, making it a perfect centerpiece."
     },
     {
-      "id": 13,
-      "type": "Living Room Furniture",
+      "id": "13",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/e6/21/23/e62123ea860b60b11cf0423dd8e796ef.jpg",
       "imageCategory": "Tray Table",
       "description": "Gladom Tray Table, Red",
@@ -286,8 +315,8 @@
       "details": "Enhance your workspace with the Markus Office Chair in Vissle Dark Gray. This ergonomic chair features adjustable height and lumbar support, ensuring comfort during long hours of work. Its modern design and durable materials make it a practical choice for any office."
     },
     {
-      "id": 14,
-      "type": "Bedroom Furniture",
+      "id": "14",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/fe/ba/12/feba122e3f7b74518817f14a8c08da92.jpg",
       "imageCategory": "Storage Combination",
       "description": "Hauga Storage Combination",
@@ -299,8 +328,8 @@
       "details": "Create a cozy corner with the Strandmon Wing Chair in Nordvalla Dark Gray. This wingback chair features a high backrest and deep seat, offering exceptional comfort and support. Its timeless design and durable upholstery blend seamlessly into any living room."
     },
     {
-      "id": 15,
-      "type": "Bedroom Furniture",
+      "id": "15",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/57/0f/bc/570fbc8ca94890f5d903ed316c4d71ba.jpg",
       "imageCategory": "Wardrobe",
       "description": "Pax/Hasvik Wardrobe",
@@ -312,8 +341,8 @@
       "details": "Add functional storage to your entryway with the Nornas Storage Bench in Pine. This bench features a spacious compartment for shoes or accessories, along with a sturdy seat for comfortable seating. Its natural wood finish and minimalist design complement any decor."
     },
     {
-      "id": 16,
-      "type": "Bedroom Furniture",
+      "id": "16",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/47/d6/29/47d629fa9f4d366542f2ea73bf978d20.jpg",
       "imageCategory": "Dresser",
       "description": "Hemnes 8-Drawer Dresser",
@@ -325,8 +354,8 @@
       "details": "Organize your entertainment area with the Besta TV Bench in Lappviken Black-Brown. This TV bench features drawers for media storage and a spacious top for TVs or decor. Its sleek design and integrated cable management create a tidy setup for your living room."
     },
     {
-      "id": 17,
-      "type": "Bedroom Furniture",
+      "id": "17",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/f0/51/82/f051828712262c9538be39a24e22a5d7.jpg",
       "imageCategory": "Nightstand",
       "description": "Yttervåg Nightstand, Gray-Brown",
@@ -338,8 +367,8 @@
       "details": "Complete your bedroom with the Hemnes Nightstand in Black-Brown. This nightstand features a drawer and shelf for bedside essentials, offering both storage and style. Its classic design and durable construction make it a practical addition to any bedroom."
     },
     {
-      "id": 18,
-      "type": "Bedroom Furniture",
+      "id": "18",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/31/60/2c/31602c096b3bfeb49dafb1d09bc095c3.jpg",
       "imageCategory": "Bed with Storage",
       "description": " Bed with Headboard and Storage",
@@ -351,8 +380,8 @@
       "details": "Organize your books and decor with the Billy Bookcase in White. This bookcase features adjustable shelves and a simple design, ideal for living rooms or offices. Its versatile style and sturdy construction provide long-lasting storage solutions."
     },
     {
-      "id": 19,
-      "type": "Living Room Furniture",
+      "id": "19",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/17/d3/62/17d36220d1423986034262194510240c.jpg",
       "imageCategory": "Coffee Table",
       "description": "Idanäs Coffee Table, Dark Brown Stained",
@@ -364,8 +393,8 @@
       "details": "Relax in style with the Falholmen Sun Lounger in Gray-Brown Stained finish. This outdoor lounger features an adjustable backrest and comfortable cushion, perfect for sunbathing or reading. Its weather-resistant materials ensure durability for outdoor use."
     },
     {
-      "id": 20,
-      "type": "Living Room Furniture",
+      "id": "20",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/e9/83/6e/e9836e274cda712079133ecda9227a2d.jpg",
       "imageCategory": "Bench Storage",
       "description": "Tolkning Bench with Storage, Handmade Rattan",
@@ -377,8 +406,8 @@
       "details": "Create a playful environment with the Mammut Children's Chair in Light Blue. This chair is suitable for both indoor and outdoor use, featuring a lightweight design and easy-to-clean material. Its vibrant color and sturdy construction make it perfect for kids."
     },
     {
-      "id": 21,
-      "type": "Bedroom Furniture",
+      "id": "21",
+      "category": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/7d/e8/2c/7de82c1baf806659db9d2832d98df78c.jpg",
       "imageCategory": "Bed Frame",
       "description": "Neiden Bed Frame, Pine",
@@ -390,8 +419,8 @@
       "details": "Simple and sturdy pine bed frame, ideal for minimalist bedroom setups."
     },
     {
-      "id": 22,
-      "type": "Dining Room Furniture",
+      "id": "22",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/37/30/f5/3730f5c934c76e2645d87fa829580aa7.jpg",
       "imageCategory": "Drop-Leaf Table",
       "description": "Nordviken Drop-Leaf Table, Black",
@@ -403,8 +432,8 @@
       "details": "Black drop-leaf table suitable for small dining spaces, seats up to four people comfortably."
     },
     {
-      "id": 23,
-      "type": "Dining Room Furniture",
+      "id": "23",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/35/6b/c5/356bc50b8d089a25c7cfe6d0ed5a71d6.jpg",
       "imageCategory": "Dining Set",
       "description": "Mörbylånga/Tobias Table and 6 Chairs",
@@ -416,8 +445,8 @@
       "details": "Elegant dining set featuring a large table and six comfortable chairs in a modern design."
     },
     {
-      "id": 24,
-      "type": "Living Room Furniture",
+      "id": "24",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/44/b0/0a/44b00af06f2cc9f994b2256651fa4050.jpg",
       "imageCategory": "Sideboard",
       "description": "Malsjö Sideboard, Black Stained",
@@ -429,8 +458,8 @@
       "details": "Black stained sideboard with ample storage space, perfect for living room or dining room."
     },
     {
-      "id": 25,
-      "type": "Living Room Furniture",
+      "id": "25",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/ba/48/14/ba48145126dfae00af0cddd5185c03a6.jpg",
       "imageCategory": "Sideboard",
       "description": "Fjällbo Sideboard, Black",
@@ -442,8 +471,8 @@
       "details": "Compact black sideboard with a minimalist design, suitable for various living room styles."
     },
     {
-      "id": 26,
-      "type": "Dining Room Furniture",
+      "id": "26",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/17/ce/21/17ce21c8f1ee242c113c33e0fc3ca396.jpg",
       "imageCategory": "Dining Set",
       "description": "Ekedalen/Ekedalen Table with 6 Chairs and Bench",
@@ -455,8 +484,8 @@
       "details": "Versatile dining set including a table, six chairs, and a bench, great for family gatherings."
     },
     {
-      "id": 27,
-      "type": "Living Room Furniture",
+      "id": "27",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/61/00/99/610099885d1b996962ee9983882820a8.jpg",
       "imageCategory": "Cabinet",
       "description": "Hemnes Glass-Door Cabinet with 3 Drawers",
@@ -468,8 +497,8 @@
       "details": "Glass-door cabinet with drawers, combines practical storage with a classic look."
     },
     {
-      "id": 28,
-      "type": "Living Room Furniture",
+      "id": "28",
+      "category": "Living Room Furniture",
       "image": "https://i.pinimg.com/474x/e5/b7/19/e5b71921d60a85e5e567aa2e7fc382c9.jpg",
       "imageCategory": "Table",
       "description": "Mariedamm Table, Black Marble Effect",
@@ -481,8 +510,8 @@
       "details": "Modern black marble effect table, perfect for contemporary living spaces."
     },
     {
-      "id": 29,
-      "type": "Dining Room Furniture",
+      "id": "29",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/474x/3a/ec/b0/3aecb00b7b566975756cbaa71ef1908d.jpg",
       "imageCategory": "Dining Set",
       "description": "Haverud/Dalfred Table and 2 Stools",
@@ -494,8 +523,8 @@
       "details": "Compact dining set with a table and two stools, ideal for small kitchens or dining areas."
     },
     {
-      "id": 30,
-      "type": "Dining Room Furniture",
+      "id": "30",
+      "category": "Dining Room Furniture",
       "image": "https://i.pinimg.com/736x/35/97/91/359791e3d04d86067b43207ecfae65da.jpg",
       "imageCategory": "Bench",
       "description": "Skogsta Bench, Acacia",
@@ -507,8 +536,8 @@
       "details": "Acacia wood bench, sturdy and durable, suitable for indoor or outdoor use."
     },
     {
-      "id": 31,
-      "type": "Decoretion Furniture",
+      "id": "31",
+      "category": "Decoretion Furniture",
       "image": "https://theadaptaffairs.com/wp-content/uploads/2024/07/61DFbnFXSgL.jpg",
       "imageCategory": "Garden Swing",
       "description": " Two-Seater Outdoor Luxury Swing",
@@ -520,8 +549,8 @@
       "details": "perfect blend of elegance, comfort, and durability. This exquisite piece of outdoor furniture is designed to elevate your garden, patio, or balcony experience, providing a serene retreat for you and your loved one."
     },
     {
-      "id": 32,
-      "type": "Living Room Furniture",
+      "id": "32",
+      "category": "Living Room Furniture",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT-Rvg1oztGxZR8wSWApUvv5oCoQMB_2mIu_Jt_Mf0i3omgt9k_XtpSxVWYzQxVOt71K9sk3SMmyfsBj7Uhun0amYahRLVasAJidkHY5gJS",
       "imageCategory": "Sofa Set",
       "description": "Outdoor Garden Patio Seating Sofa Set",
@@ -533,8 +562,8 @@
       "details": "OUTLIVING Outdoor Garden Patio Seating Sofa Set with Center Table 5 Seater Sofa Set for Balcony"
     },
     {
-      "id": 33,
-      "type": "Dining Room Furniture",
+      "id": "33",
+      "category": "Dining Room Furniture",
       "image": "https://townchair.com/wp-content/uploads/2024/05/Townchair-Outdoor-Braided-Rope-Sofa-Set-4-Seater-and-1-Table-with-Cushions-2-768x768.jpg",
       "imageCategory": "Town Chair",
       "description": "Town Chair Rope Furniture is manufactured",
@@ -546,8 +575,8 @@
       "details": "This design is completely hand woven by our team of skilled and trained craftsmen "
     },
     {
-      "id": 34,
-      "type": "Dining Room Furniture",
+      "id": "34",
+      "category": "Dining Room Furniture",
       "image": "https://townchair.com/wp-content/uploads/2024/05/Townchair-Outdoor-Braided-Rope-Sofa-Set-Grey-Colour-4-Seater-and-1-Table-with-Cushions-768x768.webp",
       "imageCategory": "Rope Town Chair",
       "description": "best quality materials for long lasting durability",
@@ -559,8 +588,8 @@
       "details": "manufacturing defects Sofa Armchair with Braided Rope with 2 years warranty on continuous usage under shade"
     },
     {
-      "id": 35,
-      "type": "Living Room Furniture",
+      "id": "35",
+      "category": "Living Room Furniture",
       "image": "https://m.media-amazon.com/images/I/91CMZtwEw2L.jpg",
       "imageCategory": "OUTLIVING Rattan & Wicker",
       "description": "5 Seater L Shape Sofa Set",
@@ -572,8 +601,8 @@
       "details": "Rattan & Wicker 5 Seater L Shape Sofa Set with Table for Outdoor Patio Furniture Sofa Set for Garden Poolside Area (Brown & Beige)"
     },
     {
-      "id": 36,
-      "type": "Decoretion Furniture",
+      "id": "36",
+      "category": "Decoretion Furniture",
       "image": "https://m.media-amazon.com/images/I/617UyLjOhQL._SX679_.jpg",
       "imageCategory": "Swing Chair",
       "description": "SpyderCraft Alisha Craft Single Seater Swing Chair",
@@ -585,8 +614,8 @@
       "details": "SpyderCraft Alisha Craft Single Seater Swing Chair with Stand & Cushion Outdoor Indoor Balcony Garden Patio,Powder Coated Frame,UV Protected Wicker,Premium Cushion, Metal"
     },
     {
-      "id": 37,
-      "type": "Decoretion Furniture",
+      "id": "37",
+      "category": "Decoretion Furniture",
       "image": "https://m.media-amazon.com/images/I/414yv5j7ScL._SX300_SY300_QL70_FMwebp_.jpg",
       "imageCategory": "Swing Chair",
       "description": "Flying ArrowOutdoor Furniture Double Seater Swing",
@@ -598,8 +627,8 @@
       "details": "Flying ArrowOutdoor Furniture Double Seater Swing, Beautiful Swing with Stand (Black Swing with Grey Sofa Cushion, Iron)"
     },
     {
-      "id": 38,
-      "type": "Decoretion Furniture",
+      "id": "38",
+      "category": "Decoretion Furniture",
       "image": "https://dreamlineoutdoorfurniture.com/cdn/shop/files/3_24a7a440-8de7-4ab7-a8a8-269ab94c2707.jpg?v=1683190957&width=1800",
       "imageCategory": "Hanging Swing",
       "description": "Ulek Single Seater Hanging Swing",
@@ -611,8 +640,8 @@
       "details": "Ulek Single Seater Hanging Swing Without Stand For Balcony , Garden Swing (White + Tan) Braided & Rope"
     },
     {
-      "id": 39,
-      "type": "Decoretion Furniture",
+      "id": "39",
+      "category": "Decoretion Furniture",
       "image": "https://imgcdn.stablediffusionweb.com/2024/5/26/8815c635-5d49-4650-80ce-9bb3d9708d68.jpg",
       "imageCategory": "wooden chair",
       "description": "handmade outdoor wooden furniture has a fair level of logical consistency and clarity,",
@@ -624,8 +653,8 @@
       "details": "The furniture is recognizable as handmade and wooden, but the overall image appears somewhat artificial and lacks unique features."
     },
     {
-      "id": 40,
-      "type": "Decoretion Furniture",
+      "id": "40",
+      "category": "Decoretion Furniture",
       "image": "https://images.jdmagicbox.com/quickquotes/images_main/-5srn0lvh.jpg",
       "imageCategory": "Bamboo swing",
       "description": "outdoor wooden furniture has a fair level of logical consistency and clarity,",
@@ -637,8 +666,8 @@
       "details": "Teirtu Three Seater Hanging Swing Without Stand For Balcony , Garden Swing"
     },
     {
-      "id": 41,
-      "type": "Decoretion Furniture",
+      "id": "41",
+      "category": "Decoretion Furniture",
       "image": "https://3.imimg.com/data3/UK/AU/MY-11181650/home-interior-furnishings-500x500.jpg",
       "imageCategory": "Hall furniture",
       "description": " wooden furniture has a fair level of logical consistency and clarity,",
@@ -650,8 +679,8 @@
       "details": "Teirtu Three Seater Hanging Without Stand For Balcony , Garden "
     },
     {
-      "id": 42,
-      "type": "Decoretion Furniture",
+      "id": "42",
+      "category": "Decoretion Furniture",
       "image": "https://images.jdmagicbox.com/quickquotes/images_main/showpiece-rack-2211737074-llc1gjxm.jpg",
       "imageCategory": "Showpices",
       "description": " wooden furniture has a fair level of logical consistency and clarity,",
