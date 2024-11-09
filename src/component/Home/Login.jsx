@@ -89,21 +89,26 @@ import { Link } from 'react-router-dom';
 import { LoginContext } from '../contextFolder/UserContext';
 import register from "../../assets/registerBG1.jpg";
 import axios from 'axios';
-import Cookies from 'js-cookie';
+
 
 const Login = () => {
   const { handleSubmission, handleChange, datas, activeUser, setActiveUser } = useContext(LoginContext);
   const userName = activeUser?.username;
   const email = activeUser?.email;
 
-  const handleLogout = async() => {
-    // setActiveUser(null);
-    // localStorage.removeItem("activeUserData");
-    await axios.post("http://localhost:3000/logout")
-    Cookies.remove("user");
-    Cookies.remove("token")
-    setActiveUser(null)
+  const handleLogout = async () => {
+    try {
+      console.log("logout working");
+      
+      const response = await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+      console.log(response.data); 
+      setActiveUser(null);
+      
+    } catch (error) {
+      console.error('Error during logout:', error.response || error.message);
+    }
   };
+  
 
   return (
     <div

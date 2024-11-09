@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { createContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Cookies from 'js-cookie';
+import 'react-toastify/dist/ReactToastify.css';
+import {toast} from 'react-toastify'
 
 export const LoginContext = createContext()
 const UserContext = ({ children }) => {
@@ -27,7 +29,7 @@ const UserContext = ({ children }) => {
   //all states end........
 
 
-
+//hhekkeikdsk
 
 
 
@@ -44,46 +46,56 @@ const UserContext = ({ children }) => {
 
       let ress = await axios.post("http://localhost:3000/login", {username:datas.username,password:datas.password},{withCredentials:true});
       let UsersFromDB = ress.data;
-      // console.log("login details", UsersFromDB);
-
-      // const { userToken, user } = UsersFromDB
-      // Cookies.set("user", JSON.stringify(user))
-      // Cookies.set("userToken", JSON.stringify(userToken))
-
-      //  console.log("cookieessToken",token);
+     
 
 
-      alert("Login successfully")
+      // alert("Login successfully")
+      toast.error("Login successfully")
       setDatas({ username: "", password: "" })
       navigate("/home")
-
-
-
 
       //login user or admin  end.............
     } catch (error) {
       console.error('There was an error making the request:', error);
+      toast.error('Login successfully')
+      
     }
   }
 
-  // useEffect(() => {
-  //   let user = Cookies.get("user")
-  //   let token = Cookies.get("userToken")
-  //   let activeUser = user&&JSON.parse(user)
-  //   console.log("cookieessiddd", activeUser);
-  //   setActiveUser(activeUser)
-  // }, [])
-
+  useEffect(() => {
+    // Retrieve the cookie value
+    const userCookie = Cookies.get("user");
+    
+    console.log("Cookie value:", userCookie);
+  
+    if (userCookie) {
+     
+      const userJson = userCookie.startsWith("j:") ? userCookie.slice(2) : userCookie;
+  
+      try {
+        const user = JSON.parse(userJson);
+        console.log("Parsed User Object:", user);
+        console.log("Username:", user.username);
+        setActiveUser(user)
+      } catch (error) {
+        console.error("Failed to parse user cookie:", error);
+      }
+    } else {
+      console.log("User cookie not found");
+    }
+  }, [datas]);
   //login function end........
 
   //admin logout........
   const adminLogOut = () => {
     localStorage.removeItem("adminData")
     setAdimin(null)
+    toast.error("Login successfully")
     navigate("/home")
   }
 
 
+  //hellooooooo
   //fetching all products.....
   useEffect(() => {
     const fetchProducts = async () => {

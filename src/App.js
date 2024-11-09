@@ -1,6 +1,7 @@
 
 
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './component/Home/Login';
 import { Routes, Route } from 'react-router-dom';
@@ -26,6 +27,7 @@ import ClientDetails from './component/admin/ClientDetails';
 import ProductsListD from './component/admin/ProductsListD';
 import AddForm from './component/admin/AddForm';
 import EditForm from './component/admin/EditForm';
+import { ToastContainer, toast } from 'react-bootstrap';
 
 
 
@@ -40,8 +42,11 @@ return (
       {
     !admin?(
       <div >
+        
         <NavBar />
+        <ToastContainer/>
         <Routes>
+          {/* <ToastContainer/> */}
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -78,7 +83,9 @@ return (
       </div>
     )
   }
+  
   </div>
+  
 )
   
   }

@@ -745,7 +745,7 @@
 
 
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Badge } from 'react-bootstrap';
 import { FaUser, FaShoppingCart, FaBars, FaTimes, FaSearch, FaHeart } from "react-icons/fa";
@@ -763,6 +763,7 @@ function NavBar() {
   let wishlistCount = wishlistItems?.length || 0; // Ensure wishlistItems exists
   let user = activeUser && activeUser.username;
 
+console.log("active",user);
 
 
   // let activeuser= Cookies.get("user")
@@ -778,6 +779,12 @@ function NavBar() {
     e.preventDefault();
     console.log("Search query:", searchQuery);
   };
+
+  
+  
+  
+ 
+
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-transparent h-[90px] flex items-center px-4 shadow-sm">
@@ -852,7 +859,7 @@ function NavBar() {
           
           <NavLink to="/login" className="flex flex-col items-center text-white no-underline hover:text-black">
             <FaUser size={20} />
-            <span className="ms-2 text-2xs font-semibold">{user ? <span className="text-white font-bold">{user}</span> : "Login"}</span>
+            <span className="ms-2 text-2xs font-semibold">{user ? (<span className="text-white font-bold">{user}</span>) : ("Login")}</span>
           </NavLink>
         </div>
       </div>
