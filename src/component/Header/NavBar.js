@@ -759,8 +759,10 @@ function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-  let cartlength = cartItems.length;
-  let wishlistCount = wishlistItems?.length || 0; // Ensure wishlistItems exists
+
+  let cartlength = cartItems?.length || 0;
+  let wishlistCount = wishlistItems?.length || 0;
+
   let user = activeUser && activeUser.username;
 
 console.log("active",user);

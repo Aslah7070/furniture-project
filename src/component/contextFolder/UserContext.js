@@ -65,6 +65,7 @@ const UserContext = ({ children }) => {
   useEffect(() => {
     // Retrieve the cookie value
     const userCookie = Cookies.get("user");
+    console.log("cokidkid",Cookies.get("token"));
     
     console.log("Cookie value:", userCookie);
   

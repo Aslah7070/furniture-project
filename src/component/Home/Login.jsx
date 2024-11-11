@@ -89,21 +89,31 @@ import { Link } from 'react-router-dom';
 import { LoginContext } from '../contextFolder/UserContext';
 import register from "../../assets/registerBG1.jpg";
 import axios from 'axios';
+import { CartContext } from '../contextFolder/ProductContext';
+
 
 
 const Login = () => {
   const { handleSubmission, handleChange, datas, activeUser, setActiveUser } = useContext(LoginContext);
+const {cartItems,setCartItems}=useContext(CartContext)
+  console.log("cartItems",cartItems);
+  
+  
+  
   const userName = activeUser?.username;
   const email = activeUser?.email;
 
   const handleLogout = async () => {
     try {
       console.log("logout working");
+      console.log("cartItems",cartItems);
       
       const response = await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
-      console.log(response.data); 
+      console.log(response.data);
+      setCartItems(null) 
       setActiveUser(null);
       
+      console.log("cartItems",cartItems);
     } catch (error) {
       console.error('Error during logout:', error.response || error.message);
     }
